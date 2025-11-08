@@ -1,0 +1,18 @@
+services:
+  claude:
+    build: .
+    container_name: claude-code
+    env_file:
+      - .env
+    stdin_open: true
+    tty: true
+    working_dir: /workspace
+    environment:
+      - CLAUDE_HOME=/root/.claude
+      - CLAUDE_DISABLE_PLUGINS=true
+      - SUPERCLAUDE_PATH=/opt/SuperClaude_Framework
+      - PATH="/opt/SuperClaude_Framework/bin:$PATH"
+    volumes:
+      - ${LOCAL_PATH}:/workspace
+      - ${LOCAL_PATH}/empty:/workspace/.claude
+    restart: unless-stopped
