@@ -33,7 +33,9 @@ claude-docker/
 ## 🚀 Hızlı Başlangıç
 
 ### 1. Ortam Değişkenlerini Yapılandır
+
 `.env` dosyasını oluşturun:
+
 ```bash
 ANTHROPIC_BASE_URL=https://api.z.ai/api/anthropic
 ANTHROPIC_AUTH_TOKEN=your_token_here
@@ -45,11 +47,13 @@ LOCAL_PATH=/Users/baran
 ```
 
 ### 2. Konteyneri Başlat
+
 ```bash
 docker-compose up -d --build
 ```
 
 ### 3. Claude Code'a Bağlan
+
 ```bash
 docker-compose exec claude bash
 ```
@@ -57,6 +61,7 @@ docker-compose exec claude bash
 ## 🔧 Kullanım Komutları
 
 ### Geliştirme Ortamı
+
 ```bash
 # Konteyneri build et ve başlat
 docker-compose up -d --build
@@ -72,6 +77,7 @@ docker-compose down
 ```
 
 ### Güncelleme Yönetimi
+
 ```bash
 # Manuel güncelleme kontrolü (konteyner içinde)
 /usr/local/bin/check_update.sh
@@ -87,6 +93,7 @@ sc update
 ## 🔄 Otomatik Güncelleme Sistemi
 
 Konteyner her başlatıldığında:
+
 1. ✅ SuperClaude sürümünü kontrol eder
 2. 🔍 Yeni sürüm varsa güncelleme seçeneği sunar
 3. 🚀 Claude Code'u güncel sürümle başlatır
@@ -127,5 +134,20 @@ Bu proje MIT lisansı altında dağıtılmaktadır.
 - 🔧 **Zero-Konfigürasyon**: Hızlı kurulum ve başlatma
 
 ---
+
+/sc:recommend ultra akıllı komut öneri sistemi eklendi!
+
+🧠 Özellikler:
+
+- Çok dilli destek (Türkçe/İngilizce)
+- Proje bağlamı algılama
+- Zaman ve bütçe estimasyonu
+- 8 farklı kategori desteği (ML, Web, Security, vb.)
+- 50+ komut seçeneği
+
+💡 Hızlı Başlangıç:
+/sc:recommend "yeni proje başlatıyorum"
+/sc:recommend "performans iyileştirmesi" --estimate
+/sc:recommend --stream "e-ticaret projemi takip et"
 
 **⚡ Claude Docker ile AI destekli geliştirmeye hemen başlayın!**
