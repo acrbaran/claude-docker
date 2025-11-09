@@ -47,6 +47,7 @@ WORKDIR /workspace
 COPY check_update.sh /usr/local/bin/check_update.sh
 COPY update_now.sh /usr/local/bin/update_now.sh
 RUN chmod +x /usr/local/bin/check_update.sh /usr/local/bin/update_now.sh
+COPY recommend.md /root/.claude/commands/sc/recommend.md
 
 RUN echo 'if [ -t 1 ]; then bash /usr/local/bin/check_update.sh; fi' >> /root/.bashrc
 
